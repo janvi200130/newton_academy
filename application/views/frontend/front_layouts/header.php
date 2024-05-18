@@ -120,8 +120,8 @@
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Courses</a>
                             <div class="dropdown-menu">
                                 <ul>
+                                    <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('courses')?>">Courses</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('syllabus')?>">Syllabus</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('courses')?>">All Courses</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('scholarship')?>">Scholarship</a></li>
                                 </ul>
                             </div>
@@ -131,15 +131,13 @@
                         <a class="nav-link nav-item" href="<?= base_url('study')?>">Study Material</a>
                     </li>
 
-					<li class="dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Pages</a>
-                        <div class="dropdown-menu">
-							<ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('login')?>">Login</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('registration')?>">Register</a></li>
-                            </ul>
-                        </div>
+                    <li class="navbar">
+                        <a class="nav-link nav_item" href="<?= base_url('login')?>">Login</a>
                     </li>
-                    
+                    <li class="navbar">
+                        <a class="nav-link nav_item" href="<?= base_url('registration')?>">Registration</a>
+                    </li>
+                            
                     <li class="navbar">
                         <a class="nav-link nav-item" href="<?= base_url('career')?>">Career</a>
                     </li>

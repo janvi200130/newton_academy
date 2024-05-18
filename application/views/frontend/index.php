@@ -2,9 +2,17 @@
 <?php include('front_layouts/header.php')?>
 
     <style>
+        .h3, h3 {
+                font-size: 36px;
+            }
         @media only screen and (max-width: 480px) {
             .image{
                 height: 355px;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .h3, h3 {
+                font-size: 36px;
             }
         }
     </style>
@@ -75,9 +83,9 @@
 <div class="section background_bg bg_blue" data-img-src="../assets/frontend_assets/images/pattern_bg1.png">
     <div class="container">
         <div class="row align-items-center justify-content-between">
-            <div class="col-xl-6 col-lg-6 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+            <div class="col-xl-5 col-lg-5 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
                 <div class="heading_s1 heading_apply_form heading_light">
-					<h2>Register now</h2>
+					<h3>Enquiry now</h3>
                 </div>
                 <p class="text-white leads">"Unlock your potential and embark on a journey of discovery with Newton Academy. Join our vibrant community of students who dare to dream, strive for excellence, and embrace the pursuit of knowledge. Together, let's ignite your passion for learning and pave the way to a future filled with endless possibilities. Register now and take the first step towards realizing your aspirations at Newton Academy."</p>
                <center> 
@@ -85,35 +93,110 @@
                </center>
                 <!-- <a href="#" class="btn btn-tran-border">Already Apply</a> -->
             </div>
-            <div class="col-xl-5 col-lg-6">
+            <div class="col-xl-7 col-lg-7">
                 <div class="bg-white apply_form radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.3s">
 					<div class="heading_s1">
 						<h3>Apply Online Courses</h3>
 					</div>
                 	<form action="" method="post">
-                        <div class="form-group">
-                            <input required="required" placeholder="Enter Name *" class="form-control" name="name" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input required="required" placeholder="Enter Email *" class="form-control" name="email" type="email">
-                        </div>
-                        <div class="form-group">
-                            <input required="required" placeholder="Enter Phone No *" class="form-control" name="phone" type="tel">
-                        </div>
-                        <div class="form-group">
-                            <div class="custom_select">
-                                <select class="form-control">
-                                    <option value="">Select Course</option>
-                                    <option value="1"></option>
-                                    <option value="2">Course2</option>
-                                    <option value="3">Course3</option>
-                                    <option value="4">Course4</option>
-                                </select>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <input type="text" required="" class="form-control" name="name" placeholder="Enter Your Name">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <input type="text" required="" class="form-control" name="mobile" placeholder="Enter Your Phone Number">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <input type="text" required="" class="form-control" name="email" placeholder="Enter Your Email">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <textarea name="description" id="description" class="form-control" placeholder="Enter Your Description" style="height:50px;"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <textarea name="note" id="note" class="form-control" placeholder="Enter Your Note" style="height:50px;"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <textarea name="address" id="address" class="form-control" placeholder="Enter Your Address" style="height:50px;"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <input type="date" required="" class="form-control" name="date" placeholder="Enter Date">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <input type="text" required="" class="form-control" name="assigned" placeholder="Assigned">
+                                </div>
+                            </div>
+                 
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <select name="reference" id="reference" class="form-control">
+                                        <option value="">Reference</option>
+                                        <option value="1">Reference1</option>
+                                        <option value="2">Reference2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <select name="source" id="source" class="form-control">
+                                        <option value="">source</option>
+                                        <option value="1">source1</option>
+                                        <option value="2">source2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <select type="text" name="student_class" class="form-control" id="student_class">
+                                        <option  value="">Select Classes</option>
+                                        <option value="5th class">5th class</option>
+                                        <option value="6th class">6th class</option>
+                                        <option value="7th class">7th class</option>
+                                        <option value="8th class">8th class</option>
+                                        <option value="9th class">9th class</option>
+                                        <option value="10th class">10th class</option>
+                                        <option value="11th class">11th class</option>
+                                        <option value="12th class">12th class</option>
+                                        <option value="JEE class">JEE class</option>
+                                        <option value="NEET class">NEET class</option>
+                                    </select>
+                                </div>
+                            </div>
+                           
+                            <div class="col-sm-6 col-md-6 mt-2">
+                                <div class="form-group">
+                                    <input type="text" required="" class="form-control" name="child" placeholder="Number Of Child">
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <button type="submit" title="Submit Your Message!" class="btn btn-default btn-block" name="submit" value="Submit">Register Now</button>
+
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btn btn-default btn-block" name="submit">Submit Now</button>
                         </div>
+
 					</form>
                 </div>
             </div>
@@ -137,42 +220,42 @@
             <div class="col-lg-4 col-md-6">
                 <div class="courses_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
                     <div class="courses_img"> 
-                    	<a href="#"><img src="../assets/frontend_assets/images/course.jpg" alt="course_img1"></a>
+                    	<a href="#"><img src="<?=base_url()?>/assets/frontend_assets/images/course.jpg" alt="course_img1"></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="courses_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.3s">
                     <div class="courses_img"> 
-                    	<a href="#"><img src="../assets/frontend_assets/images/course1.jpg" alt="course_img2"></a>
+                    	<a href="#"><img src="<?=base_url()?>/assets/frontend_assets/images/course1.jpg" alt="course_img2"></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="courses_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                     <div class="courses_img"> 
-                    	<a href="#"><img src="../assets/frontend_assets/images/course2.jpg" alt="course_img3"></a>
+                    	<a href="#"><img src="<?=base_url()?>/assets/frontend_assets/images/course2.jpg" alt="course_img3"></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="courses_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
                     <div class="courses_img"> 
-                    	<a href="#"><img src="../assets/frontend_assets/images/course3.jpg" alt="course_img4"></a>
+                    	<a href="#"><img src="<?=base_url()?>/assets/frontend_assets/images/course3.jpg" alt="course_img4"></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="courses_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.3s">
                     <div class="courses_img"> 
-                    	<a href="#"><img src="../assets/frontend_assets/images/course_img5.jpg" alt="course_img5"></a>
+                    	<a href="#"><img src="<?=base_url()?>/assets/frontend_assets/images/course_img5.jpg" alt="course_img5"></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="courses_box radius_all_10 box_shadow1 animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                     <div class="courses_img"> 
-                    	<a href="#"><img src="../assets/frontend_assets/images/course4.jpg" alt="course_img6"></a>
+                    	<a href="#"><img src="<?=base_url()?>/assets/frontend_assets/images/course4.jpg" alt="course_img6"></a>
                     </div>
                 </div>
             </div>

@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="col-sm-12 col-md-12">
+                                <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
                                         <select type="text" name="student_class" class="form-control" id="student_class">
                                             <option  value="">Select Classes</option>
@@ -82,6 +82,25 @@
                                         </select>
                                     </div>
                                 </div>
+
+                                <div class="col-sm-6 col-md-6"> 
+                                    <div class="form-group">
+                                        <select type="text" name="course" class="form-control" id="course">
+                                            <option  value="">Select Board Exams</option>
+                                            <option value="5th">5th</option>
+                                            <option value="6th">6th</option>
+                                            <option value="7th">7th</option>
+                                            <option value="8th">8th</option>
+                                            <option value="9th">9th</option>
+                                            <option value="10th">10th</option>
+                                            <option value="11th">11th</option>
+                                            <option value="12th">12th</option>
+                                            <option value="JEE">JEE</option>
+                                            <option value="NEET">NEET</option>
+                                        </select>
+                                    </div>
+                                </div>
+                              
 
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
@@ -106,39 +125,14 @@
                                         <input type="date" required="" class="form-control" name="dob" placeholder="Enter Your Date Of Birth">
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-md-6"> 
+
+                                <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <select type="text" name="course" class="form-control" id="course">
-                                            <option  value="">Select Courses</option>
-                                            <option value="5th">5th</option>
-                                            <option value="6th">6th</option>
-                                            <option value="7th">7th</option>
-                                            <option value="8th">8th</option>
-                                            <option value="9th">9th</option>
-                                            <option value="10th">10th</option>
-                                            <option value="11th">11th</option>
-                                            <option value="12th">12th</option>
-                                            <option value="JEE">JEE</option>
-                                            <option value="NEET">NEET</option>
-                                        </select>
-                                    </div>
-                                </div>
-                              
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="address" id="address" class="form-control" placeholder="Enter Your Address"></textarea>
+                                        <textarea name="address" id="address" class="form-control" placeholder="Enter Your Address" style="height:50px;"></textarea>
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- <div class="login_footer form-group">
-                                <div class="chek-form">
-                                    <div class="custome-checkbox">
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox2" value="">
-                                        <label class="form-check-label" for="exampleCheckbox2"><span>I agree to terms &amp; Policy.</span></label>
-                                    </div>
-                                </div>
-                            </div> -->
                             <div class="form-group">
                                 <button type="submit" class="btn btn-default btn-block" name="submit">Register</button>
                             </div>
