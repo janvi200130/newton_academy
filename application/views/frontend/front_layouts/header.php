@@ -66,14 +66,15 @@
 <header class="header_wrap fixed-top dark_skin main_menu_uppercase header_with_topbar" style="margin-top: -2px;">
     <div class="top-header light_skin bg_dark d-none d-md-block">
         <div class="container">
-            <div class="row align-items-center" style="margin-top: -24px;">     
-                <div class="col-md-6">
+            <div class="row align-items-center" style="margin-top: -24px;">  
+            <div class="col-md-10">
                     <ul class="contact_detail text-center text-lg-left">
                     	<li><i class="ti-mobile"></i><span>+91 8602156983, +91 7879504582</span></li>
                     	<li><i class="ti-email"></i><span>newtonacademy.bilaspur@gmail.com</span></li>
                     </ul>
-                </div>
-                <div class="col-md-6">
+                </div>   
+
+                <div class="col-md-2">
                     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-end">
                         <!-- <ul class="social_icons social_white">
                             <li><a href="#"><i class="ion-social-facebook"></i></a></li>
