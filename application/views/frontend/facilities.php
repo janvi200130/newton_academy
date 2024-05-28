@@ -8,97 +8,12 @@
         }
     }
 </style>
-<!-- START SECTION BREADCRUMB -->
-    <div class="breadcrumb_section background_bg overlay_bg_50 page_title_light" data-img-src="<?=base_url();?>assets/frontend_assets/images/slider2.jpg">
-    </div><br><br><br>
-    
-    <div class="container"><!-- STRART CONTAINER -->
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="page-title">
-            		<h1 class="text-center sub_heading">Hostel Facility</h1>
-                </div>
-                <!-- <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active">About Us</li>
-                </ol> -->
-            </div>
-        </div>
-    </div><br><br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card-body" style="background: aquamarine;">
-                       <center>
-                            <p class="text-center">Separate Hostel For Girls & Boys</p>
-                    </center>
-                 </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card-body" style="background: aquamarine;">
-                        <center>
-                            <p class="text-center">Free Wi-Fi For Online Classes</p>
-                        </center>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card-body" style="background: aquamarine;">
-                       <center>
-                            <p class="text-center">24 Hour Security Guard</p>
-                    </center>
-                </div>
-            </div>
-        <div class="col-sm-6">
-            <div class="card-body" style="background: aquamarine;">
-                   <center>
-                        <p class="text-center">AC & Non AC Rooms</p>
-                    </center>
-             </div>
-        </div>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card-body" style="background: aquamarine;">
-                       <center>
-                            <p class="text-center">CCTV Camera</p>
-                    </center>
-                 </div>
-            </div>
-        <div class="col-sm-6">
-           <div class="card-body" style="background: aquamarine;">
-                    <center>
-                        <p class="text-center">Television Facility</p>
-                    </center>
-             </div>
-        </div>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3 col-3">
-            </div>
-            <div class="col-sm-6">
-                <div class="card-body" style="background: aquamarine;">
-                        <center>
-                            <p class="text-center">Cold & Warm Water</p>
-                        </center>
-                 </div>
-            </div>
-        </div>
-    </div>
-
-<!-- END SECTION BREADCRUMB -->
  
+    <!-- START SECTION BREADCRUMB -->
+        <div class="breadcrumb_section background_bg overlay_bg_50 page_title_light" data-img-src="<?=base_url();?>assets/frontend_assets/images/slider2.jpg">
+        </div>
+    <!-- END SECTION BREADCRUMB -->
+
     <div class="section">
         <div class="heading_s1"> 
             <center> <h1 class="sub_heading">Our Hostel Facilities</h1> </center>
@@ -121,9 +36,9 @@
                     <p style="text-align: justify;">* Transport facility available</p>	
                 </div>
                 <div class="col-sm-4"> <br>
-                    <img src="../assets/frontend_assets/images/hostel_img.jpg" alt="images"><br><br>
-                    <img class="w-100 h-25" src="../assets/frontend_assets/images/hostel_img1.jpg" alt="images"><br><br>
-                    <img class="w-100 h-25" src="../assets/frontend_assets/images/hostel_img2.jpg" alt="images">
+                    <img src="<?=base_url();?>assets/frontend_assets/images/hostel_img.jpg" alt="images"><br><br>
+                    <img class="w-100 h-25" src="<?=base_url();?>assets/frontend_assets/images/hostel_img1.jpg" alt="images"><br><br>
+                    <img class="w-100 h-25" src="<?=base_url();?>assets/frontend_assets/images/hostel_img2.jpg" alt="images">
                 </div>
                 <div class="col-sm-4"> <br>
                     <p style="text-align: justify;">* Self Study Guidance</p>

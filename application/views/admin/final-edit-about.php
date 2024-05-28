@@ -42,7 +42,7 @@
               <h3 class="card-title">About Image Add Form</h3>
             </div>
             <?php 
-              foreach($new as $key){
+              foreach($about as $key){
             ?>
             <form action="<?= base_url('admin/final-edit-about');?>" method="post" enctype="multipart/form-data">
               <div class="card-body">
@@ -52,7 +52,8 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">About Content</label>
-                  <input type="text" name="content" class="form-control" id="exampleInputPassword1" placeholder="Enter About Content" required value="<?=$key->content;?>">
+                  <textarea name="content" id="exampleInputPassword1" placeholder="Enter About Content" class="form-control" style="height:200px; text-align: justify;"><?=$key->content;?></textarea>
+                
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Image Upload</label>

@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                         </div>
-                        <div class="login_footer form-group">
+                        <!-- <div class="login_footer form-group">
                             <div class="chek-form">
                                 <div class="custome-checkbox">
                                     <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox1" value="">
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <a href="#">Forgot password?</a>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <button type="submit" class="btn btn-default btn-block" name="login">Log in</button>
                         </div>
@@ -67,7 +67,7 @@
                         <li><a href="#" class="btn btn-facebook"><i class="ion-social-facebook"></i>Facebook</a></li>
                         <li><a href="#" class="btn btn-google"><i class="ion-social-googleplus"></i>Google</a></li>
                     </ul> -->
-                    <div class="form-note text-center">Don't Have an Account? <a href="signup.html">Sign up now</a></div>
+                    <div class="form-note text-center">Don't Have an Account? <a href="<?=base_url('registration')?>">Register now</a></div>
                 </div>
             </div>
         </div>

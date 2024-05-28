@@ -1,3 +1,4 @@
+
 <footer class="main-footer">
   <strong> © Created by me:- &nbsp;<a target="_blank" href="https://raysitworld.com/" class="color_white fw_400 line_height_24"> RAYS IT & DESIGN WORLD PVT. LTD.</strong>
   All rights reserved.
@@ -52,21 +53,59 @@
 <script src="<?=base_url();?>assets/admin_assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="<?=base_url();?>assets/admin_assets/datatables/jquery.dataTables.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/datatables-responsive/js/dataTables.responsive.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/datatables-buttons/js/dataTables.buttons.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/jszip/jszip.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/pdfmake/pdfmake.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/pdfmake/vfs_fonts.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/datatables-buttons/js/buttons.html5.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/datatables-buttons/js/buttons.print.min.js"></script>
+
 <script src="<?=base_url();?>assets/admin_assets/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 <script src="<?=base_url();?>assets/admin_assets/js/adminlte.min.js?v=3.2.0"></script>
 
 <script src="<?=base_url();?>assets/admin_assets/js/demo.js"></script>
+
+<script src="<?=base_url();?>assets/admin_assets/codemirror/codemirror.js"></script>
+  
+<script src="<?=base_url();?>assets/admin_assets/codemirror/mode/css/css.js"></script>
+
+<script src="<?=base_url();?>assets/admin_assets/codemirror/mode/xml/xml.js"></script>
+
+<script src="<?=base_url();?>assets/admin_assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+  <script src="<?=base_url();?>assets/admin_assets/js/demo.js"></script>
+
+<script>
+  window.alert = function() {};
+</script>
+
+  <script>
+    $(function() {
+      // Summernote
+      $("#summernote").summernote();
+
+      // CodeMirror
+      CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+        mode: "htmlmixed",
+        theme: "monokai",
+      });
+    });
+  </script>
 
 </body>
 

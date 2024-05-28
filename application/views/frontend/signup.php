@@ -41,7 +41,7 @@
                             unset($_SESSION['register']);
                         } ?>
 
-                        <form active="<?=base_url('registration')?>" method="post">
+                        <form active="<?=base_url('registration')?>" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
@@ -85,18 +85,14 @@
 
                                 <div class="col-sm-6 col-md-6"> 
                                     <div class="form-group">
-                                        <select type="text" name="course" class="form-control" id="course">
+                                        <select type="text" name="board" class="form-control" id="board">
                                             <option  value="">Select Board Exams</option>
-                                            <option value="5th">5th</option>
-                                            <option value="6th">6th</option>
-                                            <option value="7th">7th</option>
-                                            <option value="8th">8th</option>
-                                            <option value="9th">9th</option>
-                                            <option value="10th">10th</option>
-                                            <option value="11th">11th</option>
-                                            <option value="12th">12th</option>
-                                            <option value="JEE">JEE</option>
-                                            <option value="NEET">NEET</option>
+                                            <option value="Cg Board">CG BOARD</option>
+                                            <option value="CBSE">CBSE</option>
+                                            <option value="ICSE">ICSE</option>
+                                            <option value="NIOS">NIOS</option>
+                                            <option value="UP Board">UP Board</option>
+                                            <option value="Others Boards exam">Others Boards Exam</option>
                                         </select>
                                     </div>
                                 </div>
@@ -131,13 +127,19 @@
                                         <textarea name="address" id="address" class="form-control" placeholder="Enter Your Address" style="height:50px;"></textarea>
                                     </div>
                                 </div>
+
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" id="image" type="file" name="image">
+                                    </div>
+                                </div>
                             </div>
                             
                             <div class="form-group">
                                 <button type="submit" class="btn btn-default btn-block" name="submit">Register</button>
                             </div>
                         </form>
-                        <div class="form-note text-center">Already have an account? <a href="login.html">Login Here!</a></div>
+                        <div class="form-note text-center">Already have an account? <a href="<?=base_url('login')?>">Login Here!</a></div>
                     </div>
                 </div>
             </div>

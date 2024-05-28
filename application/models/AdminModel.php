@@ -6,6 +6,7 @@
 
 class AdminModel extends CI_Model
 {
+
     public function insert_contact($data)
 	{
 		$this->db->insert("contact", $data);
@@ -52,5 +53,53 @@ class AdminModel extends CI_Model
         $con=$this->db->where("id",$id)->update("slider",$data);
         return $con;
     }
+
+    public function update_counter($id)
+    {
+        $q=$this->db->where("id",$id)->get("counter")->result();
+        return $q;
+    }
+    
+    public function counter_final_update($id,$data)
+    {
+        $con=$this->db->where("id",$id)->update("counter",$data);
+        return $con;
+    }
+    public function update_director($id)
+    {
+        $q=$this->db->where("id",$id)->get("director")->result();
+        return $q;
+    }
+    
+    public function director_final_update($id,$data)
+    {
+        $con=$this->db->where("id",$id)->update("director",$data);
+        return $con;
+    }
+    public function update_chairman($id)
+    {
+        $q=$this->db->where("id",$id)->get("chairman")->result();
+        return $q;
+    }
+    
+    public function chairman_final_update($id,$data)
+    {
+        $con=$this->db->where("id",$id)->update("chairman",$data);
+        return $con;
+    }
+
+    public function update_testimonial($id)
+    {
+        $q=$this->db->where("id",$id)->get("testimonial")->result();
+        return $q;
+    }
+    
+    public function testimonial_final_update($id,$data)
+    {
+        $con=$this->db->where("id",$id)->update("testimonial",$data);
+        return $con;
+    }
+
+
 
 }

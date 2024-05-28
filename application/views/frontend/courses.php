@@ -4,7 +4,7 @@
 <style>
     .card{
         width: 300px;
-        border: 5px solid black;
+        border: 5px solid white;
         padding: 50px;
         margin: 20px;
     }
@@ -40,28 +40,28 @@
 	<div class="container">
         <div class="row">
             <div class="col-sm-4 col-md-4 col-xl-4">
-                <div class="card" style="background-color:pink;">
+                <div class="card" style="background-color:burlywood;">
                     <div class="card-body">
                         <!-- <a href="</?= base_url();?>assets/brochure.pdf"> -->
-                        <a href="<?= base_url('5th-6th-course');?>">
-                            <h5 class="card-title text-center"><b>5th to 6th</b></h5>
+                        <a href="<?= base_url('login');?>">
+                            <h5 class="card-title text-center "><b>5th to 6th</b></h5>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-xl-4">
-                <div class="card" style="background-color:yellow;">
+                <div class="card" style="background-color:burlywood;">
                     <div class="card-body">
-                        <a href="<?= base_url();?>assets/brochure.pdf">
+                        <a href="<?= base_url('login');?>">
                             <h5 class="card-title text-center"><b>7th to 8th</b></h5>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card" style="background-color:darkseagreen;">
+                <div class="card" style="background-color:burlywood;">
                     <div class="card-body">
-                        <a href="<?= base_url();?>assets/brochure.pdf">
+                        <a href="<?= base_url('login');?>">
                             <h5 class="card-title text-center"><b>9th to 10th</b></h5>
                         </a>
                     </div>
@@ -70,27 +70,27 @@
         </div>
         <div class="row mt-3" >
             <div class="col-sm-4">
-                <div class="card" style="background-color:orange;">
+                <div class="card" style="background-color:burlywood;">
                     <div class="card-body">
-                        <a href="<?= base_url();?>assets/brochure.pdf">
+                        <a href="<?= base_url('login');?>">
                             <h5 class="card-title text-center"><b>11th to 12th</b></h5>
                          </a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card" style="background-color:indianred;">
+                <div class="card" style="background-color:burlywood;">
                     <div class="card-body">
-                        <a href="<?= base_url();?>assets/brochure.pdf">
+                        <a href="<?= base_url('login');?>">
                             <h5 class="card-title text-center"><b>NEET</b></h5>
                         </a>
                     </div>
                     </div>
             </div>
             <div class="col-sm-4">
-                <div class="card" style="background-color:aquamarine;">
+                <div class="card" style="background-color:burlywood;">
                     <div class="card-body">
-                        <a href="<?= base_url();?>assets/brochure.pdf">
+                        <a href="<?= base_url('login');?>">
                             <h5 class="card-title text-center"><b>JEE</b></h5>
                         </a>
                     </div>

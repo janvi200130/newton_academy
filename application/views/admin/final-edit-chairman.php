@@ -13,19 +13,19 @@
             <div class="col-sm-12">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">About Us</li>
+                    <li class="breadcrumb-item active">Chairman Message</li>
                 </ol>
             </div>
       </div>
       <?php
-  if ($this->session->flashdata('edit_slider')) {
+  if ($this->session->flashdata('edit_chairman')) {
     ?>
      <div class="alert alert-success alert-dismissable">
       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <strong><?= $this->session->flashdata('edit_slider') ?></strong>
+      <strong><?= $this->session->flashdata('edit_chairman') ?></strong>
       </div>
       <?php 
-      unset($_SESSION['edit_slider']);
+      unset($_SESSION['edit_chairman']);
   } ?>
     </div>
   </section>
@@ -39,37 +39,27 @@
 
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Slider Image Add Form</h3>
+              <h3 class="card-title">Chairman message Update Form</h3>
             </div>
             <?php 
-              foreach($slider as $key){
+              foreach($message as $key){
             ?>
-            <form action="<?= base_url('final-edit-slider');?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('final-edit-chairman');?>" method="post">
               <div class="card-body">
                 <div class="form-group">
                   <!-- <label for="exampleInputPassword1">Id</label> -->
                   <input type="hidden" name="id" class="form-control" id="exampleInputPassword1" required value="<?=$key->id;?>">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Slider Heading</label>
-                  <input type="text" name="heading" class="form-control" id="exampleInputPassword1" placeholder="Enter Slider Heading" required value="<?=$key->heading;?>">
+                  <label for="exampleInputPassword1">Chairman Message</label>
+                  <textarea name="c_message"  id="exampleInputPassword1" placeholder="Enter Chairman Message" class="form-control" style="height:200px; text-align: justify;"><?=$key->c_message;?></textarea>
                 </div>
-
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Slider Title</label>
-                  <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Enter Slider Title" required value="<?=$key->title;?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputFile">Slider Image Upload</label>
-                  <div class="input-group">
-                    <div class="custom-file">
-                      <label class="form-label" for="exampleInputFile"></label>
-                      <input type="file" name="slider_image" class="form-control" id="exampleInputFile" placeholder="Choose file" required value="<?=$key->slider_image;?>">
-                    </div>
-                  </div>
+                  <label for="exampleInputFile">Chairman Name</label>
+                  <input type="text" id="c_name" name="c_name" class="form-control" placeholder="Enter Chairman Name" value="<?=$key->c_name;?>">
                 </div>
               </div>
+
               <div class="card-footer">
                 <button type="submit" name="submit" class="btn btn-primary">Updated</button>
               </div>

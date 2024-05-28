@@ -77,6 +77,7 @@ $route['fees']='HomeController/fees';
 
 $route['admin']='AdminController/home';
 $route['contact_us']='AdminController/contact';
+
 $route['add-slider']='AdminController/add_slider';
 $route['show-slider']='AdminController/show_slider';
 $route['edit-slider']='AdminController/edit_slider';
@@ -88,3 +89,34 @@ $route['final-edit-about']='AdminController/final_edit_about';
 
 $route['add-gallery']='AdminController/add_gallery';
 $route['show-gallery']='AdminController/show_gallery';
+
+$route['add-director']='AdminController/add_director';
+$route['show-gallery']='AdminController/show_gallery';
+
+$route['show-counter']='AdminController/show_counter';
+$route['edit-counter']='AdminController/edit_counter';
+$route['final-edit-counter']='AdminController/final_edit_counter';
+
+$route['director-msg']='AdminController/director_msg';
+$route['edit-director']='AdminController/edit_director';
+$route['final-edit-director']='AdminController/final_edit_director';
+
+$route['chairman-msg']='AdminController/chairman_msg';
+$route['edit-chairman']='AdminController/edit_chairman';
+$route['final-edit-chairman']='AdminController/final_edit_chairman';
+
+$route['vission']='AdminController/vission';
+$route['edit-vission']='AdminController/edit_vission';
+$route['final-edit-vission']='AdminController/final_edit_vission';
+
+$route['mission']='AdminController/mission';
+$route['edit-mission']='AdminController/edit_mission';
+$route['final-edit-mission']='AdminController/final_edit_mission';
+
+$route['add-testimonial']='AdminController/add_testimonial';
+$route['show-testimonial']='AdminController/show_testimonial';
+$route['edit-test']='AdminController/edit_test';
+$route['final-edit-test']='AdminController/final_edit_test';
+
+$route['facility']='AdminController/facilities';
+

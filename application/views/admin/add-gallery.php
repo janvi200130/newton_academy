@@ -1,6 +1,4 @@
-﻿
-
-<?php include('admin_layouts/header.php') ?>
+﻿<?php include('admin_layouts/header.php') ?>
 
 <div class="content-wrapper">
 
@@ -18,18 +16,18 @@
         </div>
       </div>
       <?php
-  if ($this->session->flashdata('success_image')) {
-    ?>
-     <div class="alert alert-success alert-dismissable">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <strong><?= $this->session->flashdata('success_image') ?></strong>
-      </div>
-      <?php 
-      unset($_SESSION['success_image']);
-  } ?>
+      if ($this->session->flashdata('success_image')) {
+      ?>
+        <div class="alert alert-success alert-dismissable">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong><?= $this->session->flashdata('success_image') ?></strong>
+        </div>
+      <?php
+        unset($_SESSION['success_image']);
+      } ?>
     </div>
   </section>
- 
+
 
   <section class="content">
     <div class="container-fluid">

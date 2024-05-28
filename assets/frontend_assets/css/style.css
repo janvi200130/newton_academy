@@ -7020,6 +7020,7 @@ blockquote p {
 	line-height: 40px;
 	color: #fff;
 	transition: all 0.5s ease-in-out;
+	padding-top: 8px;
 }
 .demo > ul > li > a.menu_icon {
 	line-height: 44px;

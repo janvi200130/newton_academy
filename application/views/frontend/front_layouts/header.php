@@ -71,6 +71,7 @@
                     <ul class="contact_detail text-center text-lg-left">
                     	<li><i class="ti-mobile"></i><span>+91 8602156983, +91 7879504582</span></li>
                     	<li><i class="ti-email"></i><span>newtonacademy.bilaspur@gmail.com</span></li>
+                    	<!-- <li><a class="btn btn-warning" href="</?= base_url('login')?>">Login</a></li> -->
                     </ul>
                 </div>   
 
@@ -82,9 +83,9 @@
                             <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
                             <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
                         </ul> -->
-                        <!-- <ul class="header_list border_list">
-                            <li><a href="#" class="nav_btn"><i class="ti-user"></i> Login</a></li>
-                        </ul> -->
+                        <ul class="header_list border_list">
+                            <li><a href="<?= base_url('login')?>" class="nav_btn"><i class="ti-user"></i> Login</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -133,9 +134,6 @@
                     </li>
 
                     <li class="navbar">
-                        <a class="nav-link nav_item" href="<?= base_url('login')?>">Login</a>
-                    </li>
-                    <li class="navbar">
                         <a class="nav-link nav_item" href="<?= base_url('registration')?>">Registration</a>
                     </li>
                             
@@ -147,6 +145,11 @@
                         <a class="nav-link nav-item" href="<?= base_url('contact')?>">Contact Us</a>
                     </li>
 
+                    <li class="navbar d-md-none d-block">
+                        <a class="nav-link nav-item btn btn-warning" href="<?= base_url('login')?>">Login</a>
+                    </li>
+                    <br>
+                    
                     <!-- <li class="dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Events</a>
                         <div class="dropdown-menu">
                         	<ul>

@@ -249,4 +249,194 @@ class AdminController extends CI_Controller {
 			}
 		}
 
+
+	public function show_counter()
+	{
+		$this->db->order_by('id', 'desc');
+		$data['count'] = $this->db->get("counter")->result();
+		$this->load->view('admin/show-counter', $data);
+	}
+
+	public function edit_counter()
+	{
+		$id=$this->input->get('id');
+        $data['count']=$this->AdminModel->update_counter($id);
+        $this->load->view('admin/final-edit-counter',$data);
+	}
+
+	public function final_edit_counter()
+	{
+		$id=$this->input->post('id');
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
+			$user_file_name = $_FILES['counter_image']['name'];
+			$config['upload_path']          = 'assets/admin_assets/uploads/counter/';
+			$config['allowed_types']        = 'gif|jpg|jpeg|png';
+			// $config['max_size']             = 100;
+			// $config['max_width']            = 1024;
+			// $config['max_height']           = 768;
+			$destination="assets/admin_assets/uploads/counter/".$user_file_name;
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+	
+			if ( ! $this->upload->do_upload('counter_image'))
+					{
+							$error = array('error' => $this->upload->display_errors());
+	
+							echo $error['error'];
+					}
+					else
+					{
+					$data=array(
+						'counter_image' => $user_file_name,
+						'counter' =>$this->input->post('counter'),
+						'heading' =>$this->input->post('heading')
+					);
+					$check=$this->AdminModel->counter_final_update($id,$data);
+					if ($check>0) {
+						$this->session->set_flashdata('edit_counter','Successfully Updated...');
+						redirect(base_url('show-counter'));
+					}else{
+						$this->session->set_flashdata('error','Error in Updated...');
+						redirect(base_url('show-counter'));
+					}	
+				}
+			}
+		}
+
+		public function director_msg(){
+			$data['message'] = $this->db->get("director")->result();
+			$this->load->view('admin/director-message',$data);
+		}
+
+	public function edit_director()
+	{
+		$id=$this->input->get('id');
+        $data['message']=$this->AdminModel->update_director($id);
+        $this->load->view('admin/final-edit-director',$data);
+	}
+
+	public function final_edit_director()
+	{
+		$id=$this->input->post('id');
+			$data=array(
+				'd_message' =>$this->input->post('d_message'),
+				'd_name' =>$this->input->post('d_name')
+			);
+			$check=$this->AdminModel->director_final_update($id,$data);
+			if ($check>0) {
+				$this->session->set_flashdata('edit_director','Successfully Updated...');
+				redirect(base_url('director-msg'));
+			}else{
+				$this->session->set_flashdata('error','Error in Updated...');
+				redirect(base_url('director-msg'));
+			}	
+		}
+
+
+		public function chairman_msg(){
+			$this->db->order_by('id', 'desc');
+			$data['message'] = $this->db->get("chairman")->result();
+			$this->load->view('admin/chairman-message',$data);
+		}
+
+		public function edit_chairman()
+		{
+		$id=$this->input->get('id');
+        $data['message']=$this->AdminModel->update_chairman($id);
+        $this->load->view('admin/final-edit-chairman',$data);
+		}
+
+		public function final_edit_chairman()
+		{
+		$id=$this->input->post('id');
+			$data=array(
+				'c_message' =>$this->input->post('c_message'),
+				'c_name' =>$this->input->post('c_name')
+			);
+			$check=$this->AdminModel->chairman_final_update($id,$data);
+			if ($check>0) {
+				$this->session->set_flashdata('edit_chairman','Successfully Updated...');
+				redirect(base_url('chairman-msg'));
+			}else{
+				$this->session->set_flashdata('error','Error in Updated...');
+				redirect(base_url('chairman-msg'));
+			}	
+		}
+
+		public function vission()
+	{
+		// $this->db->order_by('id', 'desc');
+		// $data['count'] = $this->db->get("counter")->result();
+		$this->load->view('admin/vission');
+	}
+
+	public function add_testimonial()
+	{
+		$this->load->view('admin/add-testimonial');
+
+		if(isset($_POST['submit'])){
+		$data = array(
+			'name' => $this->input->post('name'),
+			'designation' => $this->input->post('designation'),
+			'comment' => $this->input->post('comment')
+		);
+		$this->db->insert('testimonial', $data);
+
+		$last_id = $this->db->insert_id();
+		if ($last_id > 0) {
+			$this->session->set_flashdata('success_test','Successfully Testimonial Added...');
+			redirect(base_url('add-testimonial'));
+		} else {
+			$this->session->set_flashdata('error','Error In Testimonial Uploading...');
+			redirect(base_url('add-testimonial'));
+		}
+		}
+	}
+	
+	public function show_testimonial()
+	{
+		$data['test'] = $this->db->get("testimonial")->result();
+		$this->load->view('admin/show-testimonial',$data);
+	}
+	
+	public function test_delete($id)
+	{
+		$this->db->where('id',$id);
+		$this->db->delete('testimonial');
+		$this->session->set_flashdata("delete_test","successfully deleted");
+		redirect(base_url('show-testimonial'));
+	}
+
+	public function edit_test()
+	{
+		$id=$this->input->get('id');
+        $data['test']=$this->AdminModel->update_testimonial($id);
+        $this->load->view('admin/final-edit-test',$data);
+	}
+
+	public function final_edit_test()
+	{
+		$id=$this->input->post('id');
+
+		$data=array(
+			'name' =>$this->input->post('name'),
+			'designation' =>$this->input->post('designation'),
+			'comment' =>$this->input->post('comment')
+		);
+	
+		$check=$this->AdminModel->testimonial_final_update($id,$data);
+		if ($check>0) {
+			$this->session->set_flashdata('edit_testi','Successfully Updated...');
+			redirect(base_url('show-testimonial'));
+		}else{
+			$this->session->set_flashdata('edit_testi','Error in Updated...');
+			redirect(base_url('show-testimonial'));
+		}
+	}
+
+	public function facilities()
+	{
+		$this->load->view('admin/facility');
+	}
+
 }
