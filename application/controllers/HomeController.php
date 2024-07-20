@@ -24,19 +24,33 @@ class HomeController extends CI_Controller
 	{
 		$data['slider'] = $this->db->get("slider", 5)->result();
 		$data['about'] = $this->db->get("about")->result();
+		$data['test'] = $this->db->get("testimonial")->result();
+		$data['address1'] = $this->db->get("address1")->result();
+		$data['address2'] = $this->db->get("address2")->result();
 		$this->load->view('frontend/index', $data);
 	}
+	public function about()
+	{
+		$data['about'] = $this->db->get("about")->result();
+		$this->load->view('frontend/about-us',$data);
+	}
+	
 	public function mission()
 	{
-		$this->load->view('frontend/mission');
+		$data['mission'] = $this->db->get("mission")->result();
+		$data['vission'] = $this->db->get("vission")->result();
+		$data['test'] = $this->db->get("testimonial")->result();
+		$this->load->view('frontend/mission',$data);
 	}
 	public function director_message()
 	{
-		$this->load->view('frontend/director-message');
+		$data['message'] = $this->db->get("director")->result();
+		$this->load->view('frontend/director-message',$data);
 	}
 	public function chairman_message()
 	{
-		$this->load->view('frontend/chairman_message');
+		$data['message'] = $this->db->get("chairman")->result();
+		$this->load->view('frontend/chairman_message',$data);
 	}
 	public function courses()
 	{
@@ -73,12 +87,7 @@ class HomeController extends CI_Controller
 			}
 		}
 	}
-	// public function registration()
-	// {
-	// 	$this->db->order_by('id', 'desc');
-	// 	$data['sign'] = $this->AdminModel->registerdata();
-	// 	$this->load->view('frontend/signup', $data);
-	// }
+	
 	public function registration_form()
 	{
 
@@ -110,7 +119,7 @@ class HomeController extends CI_Controller
 						'email' => $this->input->post('email'),
 						'password' => $this->input->post('password'),
 						'dob' => $this->input->post('dob'),
-						'course' => $this->input->post('course'),
+						'board' => $this->input->post('board'),
 						'address' => $this->input->post('address'),
 						'image' => $user_file_name
 					);
@@ -131,10 +140,6 @@ class HomeController extends CI_Controller
 			$this->load->view('frontend/signup');
 		}
 
-	// public function login()
-	// {
-	// 	$this->load->view('frontend/login');
-	// }
 
 	public function login()
     {
@@ -183,10 +188,75 @@ class HomeController extends CI_Controller
 	}
 	public function hostel_facilities()
 	{
-		$this->load->view('frontend/facilities');
+		$data['fac'] = $this->db->get('facility')->result();
+		$this->load->view('frontend/facilities',$data);
 	}
 	public function fees()
 	{
 		$this->load->view('frontend/fees');
 	}
+	// public function enquiries()
+	// {
+	// 	if (isset($_POST['submit'])) {
+	// 		$data = array(
+	// 			'name' => $this->input->post('name'),
+	// 			'mobile' => $this->input->post('mobile'),
+	// 			'email' => $this->input->post('email'),
+	// 			'description' => $this->input->post('description'),
+	// 			'address' => $this->input->post('address'),
+	// 			'note' => $this->input->post('note'),
+	// 			'date' => $this->input->post('date'),
+	// 			'assigned' => $this->input->post('assigned'),
+	// 			'reference' => $this->input->post('reference'),
+	// 			'source' => $this->input->post('source'),
+	// 			'student_class' => $this->input->post('student_class'),
+	// 			'child' => $this->input->post('child')
+	// 		);
+	// 		$this->db->insert('enquiry', $data);
+
+	// 		$last_id = $this->db->insert_id();
+	// 		if ($last_id>0) {
+				
+	// 			$this->session->set_flashdata('enquiries','Successfully Enquiry...');
+	// 			redirect(base_url('enquiry'));
+	// 		} else {
+	// 			$this->session->set_flashdata('error','Error in Enquiry fill Data...');
+	// 			redirect(base_url('enquiry'));
+	// 		}
+	// 		}
+		
+	// 	$this->load->view('frontend/index');
+	// }
+
+	public function enquiries()
+	{
+		if (isset($_POST['submit'])) {
+			$data = array(
+				'name' => $this->input->post('name'),
+				'mobile' => $this->input->post('mobile'),
+				'email' => $this->input->post('email'),
+				'description' => $this->input->post('description'),
+				'address' => $this->input->post('address'),
+				'note' => $this->input->post('note'),
+				'date' => $this->input->post('date'),
+				'assigned' => $this->input->post('assigned'),
+				'reference' => $this->input->post('reference'),
+				'source' => $this->input->post('source'),
+				'student_class' => $this->input->post('student_class'),
+				'child' => $this->input->post('child')
+			);
+			$this->db->insert('enquiry', $data);
+
+			$last_id = $this->db->insert_id();
+			if ($last_id > 0) {
+				$this->session->set_flashdata('enquiries', 'Successfully Enquiry Added...');
+				redirect(base_url('/'));
+			} else {
+				$this->session->set_flashdata('error', 'Error In Enquiry Uploading...');
+				redirect(base_url('/'));
+			}
+		}
+	}
 }
+
+

@@ -33,72 +33,60 @@
     </div><!-- END CONTAINER-->
 </div>
 <!-- END SECTION BREADCRUMB -->
- 
 
-<!-- START SECTION COURSES-->
 <div class="section">
-	<div class="container">
-        <div class="row">
-            <div class="col-sm-4 col-md-4 col-xl-4">
-                <div class="card" style="background-color:burlywood;">
-                    <div class="card-body">
-                        <!-- <a href="</?= base_url();?>assets/brochure.pdf"> -->
-                        <a href="<?= base_url('login');?>">
-                            <h5 class="card-title text-center "><b>5th to 6th</b></h5>
-                        </a>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 animation" data-animation="fadeInUp" data-animation-delay="0.3s">
+               
+                <div class="row">
+                    <div class="col-sm-4 mt-3">
+                        <div class="card-body" style="background-color:chocolate; border-radius:100px;">
+                            <a href="<?= base_url('login');?>">
+                                <h5 class="card-title text-center text-white"><b>5th to 6th Course</b></h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-3">
+                        <div class="card-body" style="background-color:darkcyan; border-radius:100px;">
+                            <a href="<?= base_url('login');?>">
+                                <h5 class="card-title text-center text-white"><b>7th to 8th Course</b></h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-3">
+                         <div class="card-body" style="background-color:chocolate; border-radius:100px;">
+                            <a href="<?= base_url('login');?>">
+                                <h5 class="card-title text-center text-white"><b>9th to 10th Course</b></h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-3">
+                         <div class="card-body" style="background-color:darkcyan; border-radius:100px;">
+                            <a href="<?= base_url('login');?>">
+                                <h5 class="card-title text-center text-white"><b>11th to 12th Course</b></h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-3">
+                         <div class="card-body" style="background-color:chocolate; border-radius:100px;">
+                            <a href="<?= base_url('login');?>">
+                                <h5 class="card-title text-center text-white"><b>NEET Course</b></h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-3">
+                         <div class="card-body" style="background-color:darkcyan; border-radius:100px;">
+                            <a href="<?= base_url('login');?>">
+                                <h5 class="card-title text-center text-white"><b>JEE Course</b></h5>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            
             </div>
-            <div class="col-sm-4 col-md-4 col-xl-4">
-                <div class="card" style="background-color:burlywood;">
-                    <div class="card-body">
-                        <a href="<?= base_url('login');?>">
-                            <h5 class="card-title text-center"><b>7th to 8th</b></h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="background-color:burlywood;">
-                    <div class="card-body">
-                        <a href="<?= base_url('login');?>">
-                            <h5 class="card-title text-center"><b>9th to 10th</b></h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3" >
-            <div class="col-sm-4">
-                <div class="card" style="background-color:burlywood;">
-                    <div class="card-body">
-                        <a href="<?= base_url('login');?>">
-                            <h5 class="card-title text-center"><b>11th to 12th</b></h5>
-                         </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="background-color:burlywood;">
-                    <div class="card-body">
-                        <a href="<?= base_url('login');?>">
-                            <h5 class="card-title text-center"><b>NEET</b></h5>
-                        </a>
-                    </div>
-                    </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="background-color:burlywood;">
-                    <div class="card-body">
-                        <a href="<?= base_url('login');?>">
-                            <h5 class="card-title text-center"><b>JEE</b></h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+         </div>
+	</div>
 </div> 
-<!-- END SECTION COURSES-->
 
 <?php include('front_layouts/footer.php')?>

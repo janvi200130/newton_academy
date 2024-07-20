@@ -41,7 +41,7 @@
                             unset($_SESSION['register']);
                         } ?>
 
-                        <form active="<?=base_url('registration')?>" method="post" enctype="multipart/form-data">
+                        <form active="<?=base_url('registration')?>" method="post" enctype="multipart/form-data" onsubmit="return myfun() myfun1()">
                             <div class="row">
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
@@ -56,13 +56,15 @@
                     
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" required="" class="form-control" name="mobile" placeholder="Enter Your Mobile Number">
+                                        <input type="text" required="" class="form-control" name="mobile" id="mobilenumber" placeholder="Enter Your Mobile Number" value="">
                                     </div>
+                                    <span id="messages" style="color:red;"></span>
                                 </div>
                                 <div class="col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" required="" class="form-control" name="parent_mobile" placeholder="Enter Your Parents Mobile Number">
+                                        <input type="text"  class="form-control" name="parent_mobile" id="mobilenumber" placeholder="Enter Your Parents Mobile Number" value="">
                                     </div>
+                                    <span id="messages" style="color:red;"></span>
                                 </div>
                                 
                                 <div class="col-sm-6 col-md-6">
@@ -165,6 +167,50 @@
         } else {
             x.type = "password";
         }
+        }
+    </script>
+
+    <script>
+         function myfun(){
+            var a = document.getElementById("mobilenumber").value;
+            if(a==""){
+                document.getElementById("messages").innerHTML="** Please fill Mobile number";
+                return false;
+            }
+            if(isNaN(a)){
+                document.getElementById("messages").innerHTML="** Enter only numeric value";
+                return false;
+            }
+            if(a.length<10){
+                document.getElementById("messages").innerHTML="** Mobilenumber must be 10 digit";
+                return false;
+            }
+            if(a.length>10){
+                document.getElementById("messages").innerHTML="** Mobilenumber must be 10 digit";
+                return false;
+            }
+        }
+    </script>
+
+    <script>
+         function myfun1(){
+            var a = document.getElementById("mobilenumber").value;
+            if(a==""){
+                document.getElementById("messages").innerHTML="** Please fill Mobile number";
+                return false;
+            }
+            if(isNaN(a)){
+                document.getElementById("messages").innerHTML="** Enter only numeric value";
+                return false;
+            }
+            if(a.length<10){
+                document.getElementById("messages").innerHTML="** Mobilenumber must be 10 digit";
+                return false;
+            }
+            if(a.length>10){
+                document.getElementById("messages").innerHTML="** Mobilenumber must be 10 digit";
+                return false;
+            }
         }
     </script>
 

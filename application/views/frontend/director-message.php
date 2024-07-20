@@ -25,18 +25,21 @@
             	 <div class="heading_s1"> 
             	    <h1 class="sub_heading">Dear Students,</h1>
                 </div>
+                <?php 
+               foreach ($message as $key) {?>
                 <div class="about_section pl-lg-3">
-              		<p style="text-align: justify;">There is no substitute to hard work, you must have heard but hard work accompanied by smart work is the key to excellence in the present world of cut-throat competition. Students generally find themselves  in the ocean of confusion and dilemma when it comes to preparing for any exam. Usually students do not know how to start and what to study. To crack any exam, a smart aspirant must know that the previous year exam papers can give the glimpse of the pattern of exam. Besides this targeted preparation under expert  guidance coupled with unmatched study material makes the task much easier.</p>
+              		<p style="text-align: justify;"><?=$key->d_message;?></p>
 
-              		<p style="text-align: justify;">At <b>NEWTON ACADEMY</b>, we strive to provide you the best. We have no competitors throughout India but we set extremely tough targets for ourselves because we compete with tough targets ofimpeccablequality, arduous level of honest delivery in classrooms and impeccable study materials. Inthis endeavor, <b>NEWTON ACADEMY</b> brought out extremely sought after books, test series and magazine. Studentsare today enlightened and focused. They know what they are up to. They need just a ray ofguidance. I feel I have accomplished the reason of my existence on this earth. Proud to be that faint ray of guidance, proud to be a reason of smile on certain lips, proud to be your teacher, Friend and guide.</p>
+              		<!-- <p style="text-align: justify;">At <b>NEWTON ACADEMY</b>, we strive to provide you the best. We have no competitors throughout India but we set extremely tough targets for ourselves because we compete with tough targets ofimpeccablequality, arduous level of honest delivery in classrooms and impeccable study materials. Inthis endeavor, <b>NEWTON ACADEMY</b> brought out extremely sought after books, test series and magazine. Studentsare today enlightened and focused. They know what they are up to. They need just a ray ofguidance. I feel I have accomplished the reason of my existence on this earth. Proud to be that faint ray of guidance, proud to be a reason of smile on certain lips, proud to be your teacher, Friend and guide.</p> -->
 
                    <center><h4><b>Thank You</b></h4></center>
                     <br>
                     <h6 class="sub_heading">WITH REGARDS</h6>
-                    <h4><b>Dinu Roy</b></h4>
+                    <h4><b><?=$key->d_name;?></b></h4>
                     <h6 class="sub_heading">Director</h6>
                     <p>(Newton Group)</p>
 	            </div>
+                <?php } ?>
 	        </div>
 	    </div>
 	</div>

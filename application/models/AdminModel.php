@@ -6,6 +6,13 @@
 
 class AdminModel extends CI_Model
 {
+    public function login_db($email,$password)
+    {
+        $this->db->where("email",$email);
+        $this->db->where("password",$password);
+        $r=$this->db->get("admin")->result();
+        return $r;
+    }
 
     public function insert_contact($data)
 	{
@@ -30,6 +37,29 @@ class AdminModel extends CI_Model
 		$data = $this->db->query("select * from registration")->result();
 		return $data;
 	}
+
+    public function update_address1($id)
+    {
+        $q=$this->db->where("id",$id)->get("address1")->result();
+        return $q;
+    }
+    
+    public function address1_final_update($id,$data)
+    {
+        $con=$this->db->where("id",$id)->update("address1",$data);
+        return $con;
+    }
+    public function update_address2($id)
+    {
+        $q=$this->db->where("id",$id)->get("address2")->result();
+        return $q;
+    }
+    
+    public function address2_final_update($id,$data)
+    {
+        $con=$this->db->where("id",$id)->update("address2",$data);
+        return $con;
+    }
 
     public function update_about($id)
     {
@@ -97,6 +127,28 @@ class AdminModel extends CI_Model
     public function testimonial_final_update($id,$data)
     {
         $con=$this->db->where("id",$id)->update("testimonial",$data);
+        return $con;
+    }
+    public function update_mission($id)
+    {
+        $q=$this->db->where("id",$id)->get("mission")->result();
+        return $q;
+    }
+    
+    public function mission_final_update($id,$data)
+    {
+        $con=$this->db->where("id",$id)->update("mission",$data);
+        return $con;
+    }
+    public function update_vission($id)
+    {
+        $q=$this->db->where("id",$id)->get("vission")->result();
+        return $q;
+    }
+    
+    public function vission_final_update($id,$data)
+    {
+        $con=$this->db->where("id",$id)->update("vission",$data);
         return $con;
     }
 

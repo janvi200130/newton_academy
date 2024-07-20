@@ -57,11 +57,11 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['/']='HomeController/index';
+$route['about']='HomeController/about';
 $route['mission']='HomeController/mission';
 $route['director-message']='HomeController/director_message';
 $route['chairman-message']='HomeController/chairman_message';
 $route['courses']='HomeController/courses';
-$route['5th-6th-course']='HomeController/course_table';
 $route['study']='HomeController/study';
 $route['contact']='HomeController/contact_data';
 $route['registration']='HomeController/registration_form';
@@ -69,14 +69,30 @@ $route['login']='HomeController/login';
 $route['career']='HomeController/career';
 $route['syllabus']='HomeController/syllabus';
 $route['scholarship']='HomeController/scholarship_form';
-$route['facility']='HomeController/hostel_facilities';
+$route['facilities']='HomeController/hostel_facilities';
 $route['fees']='HomeController/fees';
+$route['enquiry']='HomeController/enquiries';
+
+$route['address1']='HomeController/address1';
 
 
 // ...........BackEnd Routes............
 
-$route['admin']='AdminController/home';
+$route['admin']='AdminController/login';
+$route['logout']='AdminController/logout';
+$route['dashboard']='AdminController/home';
+
+$route['sign-up']='AdminController/sign_up';
+$route['enquiries']='AdminController/enquiry';
 $route['contact_us']='AdminController/contact';
+
+$route['address1']='AdminController/address1';
+$route['edit-address1']='AdminController/edit_address1';
+$route['final-edit-address1']='AdminController/final_edit_address1';
+
+$route['address2']='AdminController/address2';
+$route['edit-address2']='AdminController/edit_address2';
+$route['final-edit-address2']='AdminController/final_edit_address2';
 
 $route['add-slider']='AdminController/add_slider';
 $route['show-slider']='AdminController/show_slider';
@@ -105,11 +121,13 @@ $route['chairman-msg']='AdminController/chairman_msg';
 $route['edit-chairman']='AdminController/edit_chairman';
 $route['final-edit-chairman']='AdminController/final_edit_chairman';
 
-$route['vission']='AdminController/vission';
+$route['add-vission']='AdminController/add_vission';
+$route['show-vission']='AdminController/show_vission';
 $route['edit-vission']='AdminController/edit_vission';
 $route['final-edit-vission']='AdminController/final_edit_vission';
 
-$route['mission']='AdminController/mission';
+$route['add-mission']='AdminController/add_mission';
+$route['show-mission']='AdminController/show_mission';
 $route['edit-mission']='AdminController/edit_mission';
 $route['final-edit-mission']='AdminController/final_edit_mission';
 
@@ -119,4 +137,5 @@ $route['edit-test']='AdminController/edit_test';
 $route['final-edit-test']='AdminController/final_edit_test';
 
 $route['facility']='AdminController/facilities';
+$route['show-facility']='AdminController/show_facility';
 

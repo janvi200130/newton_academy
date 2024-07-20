@@ -95,7 +95,7 @@
         <nav class="navbar navbar-expand-lg"  style="margin-top:15px;"> 
         	<a class="navbar-brand" href="<?= base_url('')?>"> 
                 <!-- <h2><b>NEWTON ACADEMY</b></h2> -->
-            	<img class="logo_dark" src="<?=base_url();?>assets/frontend_assets/images/logo.jpg" alt="logo" style="margin-top: -13px; width: 63px; height: 53px;"> 
+            	<img class="logo_dark" src="<?=base_url();?>assets/frontend_assets/images/logo.jpg" alt="logo" style="margin-top: -13px; width: 88px; height: 69px;"> 
                 <!-- <img class="logo_dark" src="assets/images/logo_dark.png" alt="logo">  -->
             </a>
           	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"> <span class="ion-android-menu"></span> </button>
@@ -109,10 +109,11 @@
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">About Us</a>
                             <div class="dropdown-menu">
                                 <ul>
+                                    <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('about')?>">About</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('director-message')?>">Director's Messages</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('chairman-message')?>">Chairman's Message</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('mission')?>">Mission & Vission</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('facility')?>">Facilities</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('facilities')?>">Facilities</a></li>
                                     <li><a class="dropdown-item nav-link nav_item" href="<?= base_url('fees')?>">Fees Structure</a></li>
                                 </ul>
                             </div>

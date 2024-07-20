@@ -20,28 +20,17 @@
         </div><br>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4"> <br>
-                    <p style="text-align: justify;">* Good infrastructure</p>
-              		<p style="text-align: justify;">* Air conditioned class room</p>
-              	    <p style="text-align: justify;">* Online/Offline classes</p>
-                    <p style="text-align: justify;">* Best faculties & facilities</p>	
-                    <p style="text-align: justify;">* Minimum student in each batch</p>	
-                    <p style="text-align: justify;">* Time management based on routine</p>	
-                    <p style="text-align: justify;">* Good atmosphere for growth</p>	
-                    <p style="text-align: justify;">* One on one attention</p>	
-                    <p style="text-align: justify;">* Each student under observation always</p>	
-                    <p style="text-align: justify;">* Weekly test</p>	
-                    <p style="text-align: justify;">* Motivational class twice in a month</p>	
-                    <p style="text-align: justify;">* Notes will be provided throughout the year</p>	
-                    <p style="text-align: justify;">* Transport facility available</p>	
+                <?php 
+                foreach($fac as $key) { ?>
+                <div class="col-sm-4 col-md-6"> <br>
+                    <p style="text-align: justify;"><?= $key->content;?></p>
+              	</div>
+                <div class="col-sm-4 col-md-6"> <br>
+                    <img src="<?= base_url();?>assets/admin_assets/uploads/facility/<?= $key->facility_image;?>" alt="images"><br><br>
                 </div>
-                <div class="col-sm-4"> <br>
-                    <img src="<?=base_url();?>assets/frontend_assets/images/hostel_img.jpg" alt="images"><br><br>
-                    <img class="w-100 h-25" src="<?=base_url();?>assets/frontend_assets/images/hostel_img1.jpg" alt="images"><br><br>
-                    <img class="w-100 h-25" src="<?=base_url();?>assets/frontend_assets/images/hostel_img2.jpg" alt="images">
-                </div>
-                <div class="col-sm-4"> <br>
-                    <p style="text-align: justify;">* Self Study Guidance</p>
+                <!-- <div class="col-sm-4 col-6"> <br>
+                    <p style="text-align: justify;"><?= $key->content;?></p> -->
+                    <!-- <p style="text-align: justify;">* Self Study Guidance</p>
                     <p style="text-align: justify;">* Doubt Clearing Facility</p>
                     <p style="text-align: justify;">* Quality Study Materials</p>
                     <p style="text-align: justify;">* Feedback & Communication System</p>
@@ -52,8 +41,9 @@
                     <p style="text-align: justify;">* Systematic Classroom</p>
                     <p style="text-align: justify;">* Online & Offline Classes</p>
                     <p style="text-align: justify;">* Competitive Environment</p>
-                    <p style="text-align: justify;">* Id Card, Bag & T Shirt</p>
-                </div>
+                    <p style="text-align: justify;">* Id Card, Bag & T Shirt</p> -->
+                <!-- </div> -->
+                <?php } ?>
             </div>
         </div>
     </div>

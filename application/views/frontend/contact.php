@@ -137,7 +137,7 @@
                             <div class="form-group col-md-6">
                             	<label>Phone<span class="required">*</span></label>
                                 <input required="" id="mobilenumber" placeholder="Enter Phone No" class="form-control" name="phone" type="text" value="">
-                                <span id="messages" style="color:yellow;"></span>
+                                <span id="messages" style="color:red;"></span>
                             </div>
                             <div class="form-group col-md-6">
                             	<label>Subject</label>
