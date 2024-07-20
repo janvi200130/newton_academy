@@ -834,4 +834,35 @@ class AdminController extends CI_Controller
 		$this->session->set_flashdata("delete_facility", "successfully deleted");
 		redirect(base_url('show-facility'));
 	}
+
+
+
+	// exam portal functions
+	public function add_course()
+	{
+		$this->load->view('admin/add_course');
+	}
+
+
+	public function all_course()
+	{
+		$this->load->view('admin/all_course');
+	}
+
+
+	public function add_exam()
+	{
+		$this->load->view('admin/add_course');
+	}
+
+	public function all_exam()
+	{
+		$this->load->view('admin/all_exam');
+	}
+
+	public function all_question(){
+		$this->load->view('admin/all_question');
+	}
+	
+
 }

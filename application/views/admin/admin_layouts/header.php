@@ -159,6 +159,39 @@
                             </ul>
                         </li>
 
+
+						<li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-sliders"></i>
+                                <p>Exam Portal
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="all-courses" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>All Course</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="all-exam" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>All Exam</p>
+                                    </a>
+                                </li>
+
+								<li class="nav-item">
+                                    <a href="all-question" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>All Questions</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="fa-regular fa-address-card"></i>

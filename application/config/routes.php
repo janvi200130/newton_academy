@@ -139,3 +139,20 @@ $route['final-edit-test']='AdminController/final_edit_test';
 $route['facility']='AdminController/facilities';
 $route['show-facility']='AdminController/show_facility';
 
+
+// user dashboard routes
+
+$route['user']='UserController/index';
+$route['user/dashboard']='UserController/index';
+
+
+
+// for admin exam portal routes
+
+$route['add-course']='AdminController/add_course';
+$route['all-courses']='AdminController/all_course';
+
+
+$route['all-exam']='AdminController/all_exam';
+
+$route['all-question']='AdminController/all_question';

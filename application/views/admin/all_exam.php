@@ -8,12 +8,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h4>Registration Tables</h4>
+              <h4>Exams</h4>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Registration</li>
+                <li class="breadcrumb-item active">All Exams</li>
               </ol>
             </div>
           </div>
@@ -23,6 +23,11 @@
       <section class="content">
         <div class="container-fluid">
           <div class="row">
+
+					<div class="col-12 my-3 text-right">
+				<a href="add-exam" class="btn btn-info text-light">Add Exam</a>
+			</div>
+
             <div class="col-12">
               <div class="card">
               <?php
@@ -53,29 +58,8 @@
                     <th>Student Image</th>
                     <th>Action</th>
                    </tr>
-                   <?php
-                      $sl = 1;
-                        foreach ($regist as $key) 
-                        {
-                        ?>
-                   <tr>
-                      <td><?= $sl++; ?></td>
-                        <td style="text-align: justify;"><?=$key->name;?></td>
-                        <td style="text-align: justify;"><?=$key->father_name;?></td>
-                        <td style="text-align: justify;"><?=$key->mobile;?></td>
-                        <td style="text-align: justify;"><?=$key->parent_mobile;?></td>
-                        <td style="text-align: justify;"><?=$key->student_class;?></td>
-                        <td style="text-align: justify;"><?=$key->email;?></td>
-                        <td style="text-align: justify;"><?=$key->password;?></td>
-                        <td style="text-align: justify;"><?=$key->dob;?></td>
-                        <td style="text-align: justify;"><?=$key->board;?></td>
-                        <td style="text-align: justify;"><?=$key->address;?></td>
-                        <td style="text-align: justify;"><?=$key->image;?></td>
-                        <td>
-                          <a class="btn btn-danger" href="<?=base_url()."AdminController/sign_delete/".$key->id;?>"><i class="fa fa-trash" aria-hidden="true"></i></a>      
-                        </td>
-                   </tr>
-                   <?php } ?>
+               
+                
                   </table>
                 </div>
               </div>

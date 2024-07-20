@@ -50,6 +50,7 @@
                         <div class="form-group">
                             <button type="submit" class="btn btn-default btn-block" name="login">Log in</button>
                         </div>
+						<a href="user/dashboard">User Dashboard</a>
                     </form>
                     <div class="form-note text-center">Don't Have an Account? <a href="<?=base_url('registration')?>">Register now</a></div>
                 </div>
