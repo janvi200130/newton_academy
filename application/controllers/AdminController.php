@@ -573,29 +573,7 @@ class AdminController extends CI_Controller
 		}
 	}
 
-	public function add_vission()
-	{
-		if ($_SESSION['email'] == '') {
-			return redirect('admin?redirect');
-		}
-		$this->load->view('admin/add-vission');
-
-		if (isset($_POST['submit'])) {
-			$data = array(
-				'title' => $this->input->post('title')
-			);
-			$this->db->insert('vission', $data);
-
-			$last_id = $this->db->insert_id();
-			if ($last_id > 0) {
-				$this->session->set_flashdata('success_vission', 'Successfully Vission Added...');
-				redirect(base_url('add-vission'));
-			} else {
-				$this->session->set_flashdata('error', 'Error In Vission Uploading...');
-				redirect(base_url('add-vission'));
-			}
-		}
-	}
+	
 	public function show_vission()
 	{
 		if ($_SESSION['email'] == '') {
@@ -634,29 +612,7 @@ class AdminController extends CI_Controller
 			redirect(base_url('show-vission'));
 		}
 	}
-	public function add_mission()
-	{
-		if ($_SESSION['email'] == '') {
-			return redirect('admin?redirect');
-		}
-		$this->load->view('admin/add-mission');
-
-		if (isset($_POST['submit'])) {
-			$data = array(
-				'title' => $this->input->post('title')
-			);
-			$this->db->insert('mission', $data);
-
-			$last_id = $this->db->insert_id();
-			if ($last_id > 0) {
-				$this->session->set_flashdata('success_mission', 'Successfully Mission Added...');
-				redirect(base_url('add-mission'));
-			} else {
-				$this->session->set_flashdata('error', 'Error In Mission Uploading...');
-				redirect(base_url('add-mission'));
-			}
-		}
-	}
+	
 	public function show_mission()
 	{
 		if ($_SESSION['email'] == '') {

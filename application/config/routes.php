@@ -121,12 +121,10 @@ $route['chairman-msg']='AdminController/chairman_msg';
 $route['edit-chairman']='AdminController/edit_chairman';
 $route['final-edit-chairman']='AdminController/final_edit_chairman';
 
-$route['add-vission']='AdminController/add_vission';
 $route['show-vission']='AdminController/show_vission';
 $route['edit-vission']='AdminController/edit_vission';
 $route['final-edit-vission']='AdminController/final_edit_vission';
 
-$route['add-mission']='AdminController/add_mission';
 $route['show-mission']='AdminController/show_mission';
 $route['edit-mission']='AdminController/edit_mission';
 $route['final-edit-mission']='AdminController/final_edit_mission';

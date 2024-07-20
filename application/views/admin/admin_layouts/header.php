@@ -227,49 +227,17 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('show-mission') ?>" class="nav-link">
                                 <i class="fa-solid fa-person-circle-exclamation"></i>
                                 <p>Mission</p>
                             </a>
-                            <ul class="nav nav-treeview">
-
-                                <li class="nav-item">
-                                    <a href="<?= base_url('add-mission') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Add Mission</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="<?= base_url('show-mission') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Show Mission</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('show-vission') ?>" class="nav-link">
                                 <i class="fa-solid fa-eye-low-vision"></i>
                                 <p>Vission</p>
                             </a>
-                            <ul class="nav nav-treeview">
-
-                                <li class="nav-item">
-                                    <a href="<?= base_url('add-vission') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Add Vission</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="<?= base_url('show-vission') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Show Vission</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
 
                         <li class="nav-item">
